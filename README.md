@@ -1,6 +1,6 @@
 # Aplikasi Todo FullStack
 
-Aplikasi todo yang sederhana fullstack.
+Aplikasi todo fullstack sederhana.
 
 ## Fitur
 
