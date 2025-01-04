@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <h1 class="todo-title">✨ Daily Todo List ✨</h1>
+        <button id="logoutButton" class="logout-button">Logout</button>
+      </div>
+      <div class="date-section">
+        <input
+          type="date"
+          id="datePicker"
+          class="date-picker"
+          value="2025-01-01"
+        />
+        <span class="date-display" id="dateDisplay"
+          >Tugas untuk hari Senin, 1 Januari 2024</span
+        >
+      </div>
+      <form class="todo-form" id="todoForm">
+        <select class="priority-select" id="prioritySelect">
+          <option value="low">🟢 Prioritas Rendah</option>
+          <option value="medium">🟡 Prioritas Sedang</option>
+          <option value="high">🔴 Prioritas Tinggi</option>
+        </select>
+        <input
+          type="text"
+          class="todo-input"
+          id="todoInput"
+          placeholder="tambah task ..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="add-button">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          Tambah
+        </button>
+      </form>
+      <div class="todo-list" id="todoList"></div>
+      <div class="todo-summary" id="todoSummary">Selesai: 0 dari 0 tugas</div>
+    </div>
+    <script
+      async
+      crossorigin="anonymous"
+      data-clerk-publishable-key="pk_test_Y2xlYW4tZm93bC0yNS5jbGVyay5hY2NvdW50cy5kZXYk"
+      src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+      type="text/javascript"
+    ></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,10 +1,16 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const { ClerkExpressWithAuth } = require("@clerk/clerk-sdk-node");
+
 const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+const clerkMiddleware = ClerkExpressWithAuth({
+  apiKey: process.env.sk_test_feJVpzDOpNKqDonytFrvCw9ETq6fMVKBut0CIzlzNZ,
+});
 
 // Middleware
 app.use(express.json());
